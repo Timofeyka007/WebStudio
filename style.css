@@ -8,3 +8,29 @@
     --navcontainer-color: #ECECEC;
     --third_background-color: #F5F4FA;
 }
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+}
+
+h1, h2, h3 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+}
+
+
+button {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+}
+
+p {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300; 
+}
+
+nav a {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+}
