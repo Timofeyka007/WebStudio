@@ -15,6 +15,27 @@ body{
   line-height: 1.71;
 }
 
+h1{
+  color: var(--photo_and_h1-color);
+}
+
+.portfolio-item h3 {
+  text-align: left;
+  margin: 20px 24px 4px;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 2;
+  color: var(--nav_and_h-color);
+}
+
+.portfolio-item p {
+  text-align: left;
+  margin: 0 24px 20px;
+  font-size: 16px;
+  line-height: 1.87;
+  color: var(--maintext-color);
+}
+
 a{
   text-decoration: none;
   color: var(--nav_and_h-color);
@@ -32,6 +53,14 @@ ul {
 
 section{
   padding: 94px 0;
+}
+
+.team{
+  background-color: var(--third_background-color);
+}
+
+footer{
+  background-color: var(--first_and_last_background-color);
 }
 
 .hero-title,
@@ -72,7 +101,7 @@ nav a {
 }
 
 .header-nav{
-  margin: 93px;
+  margin: 32px 93px;
 }
 
 .header-nav-list{
@@ -80,10 +109,28 @@ nav a {
   gap: 50px;
 }
 
-.header-contacts{
+.header-contacts {
   display: flex;
+  align-items: center;
+  gap: 30px;
   margin-left: auto;
-  gap: 50px;
+}
+
+.header-contacts-link{
+  display: flex;
+  justify-content: center;
+}
+
+.hero {
+  min-height: 600px;
+  display: flex;
+  align-items: center;
+  background-image:
+    linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+    url("/image/backgroundbigimg.jpg");
+  background-size: cover;
+  background-position: center;
+  background-color: var(--first_and_last_background-color);
 }
 
 .container{
@@ -100,14 +147,66 @@ nav a {
   text-align: center;
 }
 
+.hero-button {
+  padding: 10px 32px;
+  border: none;
+  border-radius: 4px;
+  background-color: var(--hover_and_logo-color);
+  color: var(--photo_and_h1-color);
+  cursor: pointer;
+
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+}
+
+
 .features-list{
   display: flex;
   gap: 30px;
 }
 
+.features-item{
+  width: 270px;
+}
+
+.features-item::before {
+  content: "";
+  display: flex;
+  height: 120px;
+  margin-bottom: 30px;
+
+  background-color: var(--third_background-color);
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 4px;
+}
+
+
+.features-icon-1::before{
+  background-image: url(/image/attention.svg);
+}
+
+.features-icon-2::before{
+  background-image: url(/image/punctuation.svg);
+}
+
+.features-icon-3::before{
+  background-image: url(/image/planning.svg);
+}
+
+.features-icon-4::before{
+  background-image: url(/image/technologies.svg);
+}
+
+
 .services-list{
   display: flex;
   gap: 30px;
+}
+
+.services-image {
+  width: 370px;
+  height: 294px;
+  object-fit: cover;
 }
 
 .team-list{
@@ -115,21 +214,83 @@ nav a {
   gap: 30px;
 }
 
+.team-item {
+  background-color: var(--photo_and_h1-color);
+  text-align: center;
+  padding-bottom: 30px;
+
+  box-shadow:
+    0px 1px 3px rgba(0, 0, 0, 0.12),
+    0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+.footer-address {
+  font-style: normal;
+  color: var(--photo_and_h1-color);
+}
+
 .footer-container{
   display: flex;
-  align-items: baseline;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
-.footer-address{
-  margin-left: 70px;
+.footer-logo{
+  margin-bottom: 20px;
+  margin-top: 60px;
 }
 
-.filters{
+.footer-email,
+.footer-phone{
+  color: var(--maintext-color)
+}
+
+.filters {
   display: flex;
   justify-content: center;
   gap: 8px;
   margin-bottom: 50px;
 }
+
+.filters-button {
+  padding: 6px 22px;
+
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.62;
+
+  background-color: var(--third_background-color);
+  color: var(--nav_and_h-color);
+
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.filters button:hover,
+.filters button:focus {
+  background-color: var(--hover_and_logo-color);
+  color: #fff;
+
+  box-shadow:
+    0px 3px 1px rgba(0, 0, 0, 0.1),
+    0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
+}
+
+.filters button:active {
+  background-color: var(--hover_and_logo-color);
+  color: #fff;
+
+  box-shadow:
+    0px 3px 1px rgba(0, 0, 0, 0.1),
+    0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
+}
+
+
 
 .portfolio{
   display: flex;
@@ -140,6 +301,11 @@ nav a {
 .portfolio-item{
   flex: 1 0 calc((100% - 60px) / 3);
   max-width: 404px;
+  background-color: #fff;
+  box-shadow:
+    0px 1px 1px rgba(0, 0, 0, 0.12),
+    0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
 .portfolio-image{

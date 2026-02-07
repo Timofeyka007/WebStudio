@@ -1,18 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="uk">
   <head>
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Document</title>
+    <title>Portfolio</title>
     <link rel="stylesheet" href="./css/normalize.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css">
-    <link rel="stylesheet" href="./css/style.css"/>
+    <link rel="stylesheet" href="./css/style.css">
     <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap"
-      rel="stylesheet"/>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&display=swap"
-      rel="stylesheet"/>
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Roboto:wght@300;400;500&display=swap"
+      rel="stylesheet">
   </head>
   <body>
     <header class="header">
@@ -41,14 +38,15 @@
             <a href="#" class="header-contacts-link">info@devstudio.com</a>
           </li>
           <li class="header-contacts-item">
-            <a href="#" class="header-contacts-link">+38 096 111 11 11</a>
+            <p class="header-contacts-phone">+38 096 111 11 11</p>
           </li>
         </ul>
       </div>
     </header>
 
-    <main class="main">
-      <div class="container">
+   <main class="main">
+      <section class="hero-section">
+      <div class="container hero-container">
       <ul class="filters">
         <li class="filters-item"><button class="filters-button">Усі</button></li>
         <li class="filters-item"><button class="filters-button">Веб-сайти</button></li>
@@ -59,70 +57,71 @@
 
       <ul class="portfolio">
         <li class="portfolio-item">
-          <img src="./image/technokrayk.jpg" alt="Technokryak" class="portfolio-image" />
+          <img src="./image/technokrayk.jpg" alt="Technokryak" class="portfolio-image"/>
           <h3 class="portfolio-title">Технокряк</h3>
           <p class="portfolio-category">Веб-сайт</p>
         </li>
 
         <li class="portfolio-item">
-          <img src="./image/poster.jpg" alt="Poster" class="portfolio-image" />
+          <img src="./image/poster.jpg" alt="Poster" class="portfolio-image"/>
           <h3 class="portfolio-title">Постер New Orlean vs Golden Star</h3>
           <p class="portfolio-category">Дизайн</p>
         </li>
 
         <li class="portfolio-item">
-          <img src="./image/restapp.jpg" alt="Restaurant app" class="portfolio__image" />
+          <img src="./image/restapp.jpg" alt="Restaurant app" class="portfolio__image"/>
           <h3 class="portfolio__title">Ресторан Seafood</h3>
           <p class="portfolio__category">Додаток</p>
         </li>
 
         <li class="portfolio-item">
-          <img src="./image/headphones.jpg" alt="Headphones" class="portfolio-image" />
+          <img src="./image/headphones.jpg" alt="Headphones" class="portfolio-image"/>
           <h3 class="portfolio-title">Проєкт Prime</h3>
           <p class="portfolio-category">Маркетинг</p>
         </li>
 
         <li class="portfolio-item">
-          <img src="./image/boxes.jpg" alt="Boxes" class="portfolio-image" />
+          <img src="./image/boxes.jpg" alt="Boxes" class="portfolio-image"/>
           <h3 class="portfolio-title">Проєкт Boxes</h3>
           <p class="portfolio-category">Додаток</p>
         </li>
 
         <li class="portfolio-item">
-          <img src="./image/inspirationapp.jpg" alt="Inspiration has no borders" class="portfolio-image" />
+          <img src="./image/inspirationapp.jpg" alt="Inspiration has no borders" class="portfolio-image"/>
           <h3 class="portfolio-title">Inspiration has no Borders</h3>
           <p class="portfolio-category">Веб-сайт</p>
         </li>
 
         <li class="portfolio-item">
-          <img src="./image/magazine.jpg" alt="Magazine" class="portfolio-image" />
+          <img src="./image/magazine.jpg" alt="Magazine" class="portfolio-image"/>
           <h3 class="portfolio-title">Видання Limited Edition</h3>
           <p class="portfolio-category">Дизайн</p>
         </li>
 
         <li class="portfolio-item">
-          <img src="./image/labtag.jpg" alt="LAB Tag" class="portfolio-image" />
+          <img src="./image/labtag.jpg" alt="LAB Tag" class="portfolio-image"/>
           <h3 class="portfolio-title">Проєкт LAB</h3>
           <p class="portfolio-category">Маркетинг</p>
         </li>
 
         <li class="portfolio-item">
-          <img src="./image/growingbusiness.jpg" alt="Growing business app" class="portfolio-image" />
+          <img src="./image/growingbusiness.jpg" alt="Growing business app" class="portfolio-image"/>
           <h3 class="portfolio-title">Growing Business</h3>
           <p class="portfolio-category">Додаток</p>
         </li>
       </ul>
-      </div>
-    </main>
+    </div>
+   </section>
+  </main>
 
     <footer class="footer">
-      <div class="container">
-      <img src="./image/WebStudio.svg" alt="WebStudio logo" class="footer-logo" />
+      <div class="container footer-container">
+      <img src="./image/WebStudio.svg" alt="WebStudio logo" class="footer-logo"/>
 
       <address class="footer-address">
-        м. Київ, пр-т Лесі Українки, 26<br />
-        <span class="footer-email">info@devstudio.com</span><br />
-        <span class="footer-phone">+38 096 111 11 11</span>
+      м. Київ, пр-т Лесі Українки, 26<br/>
+      <span class="footer-email">info@example.com</span><br>
+      <span class="footer-phone">+38 096 111 11 11</span>
       </address>
       </div>
     </footer>
