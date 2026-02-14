@@ -127,7 +127,7 @@ nav a {
   align-items: center;
   background-image:
     linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-    url("/image/backgroundbigimg.jpg");
+    url("./image/backgroundbigimg.jpg");
   background-size: cover;
   background-position: center;
   background-color: var(--first_and_last_background-color);
@@ -182,19 +182,19 @@ nav a {
 
 
 .features-icon-1::before{
-  background-image: url(/image/attention.svg);
+  background-image: url(./image/attention.svg);
 }
 
 .features-icon-2::before{
-  background-image: url(/image/punctuation.svg);
+  background-image: url(./image/punctuation.svg);
 }
 
 .features-icon-3::before{
-  background-image: url(/image/planning.svg);
+  background-image: url(./image/planning.svg);
 }
 
 .features-icon-4::before{
-  background-image: url(/image/technologies.svg);
+  background-image: url(./image/technologies.svg);
 }
 
 
