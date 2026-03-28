@@ -236,10 +236,30 @@ nav a {
   gap: 30px;
 }
 
+.services-item{
+  position: relative;
+}
+
 .services-image {
   width: 370px;
   height: 294px;
   object-fit: cover;
+  display: block;
+}
+
+.label {
+  display: flex;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  min-height: 70px;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  color: white;
+  text-transform: uppercase;
+  background-color: rgba(0, 0, 0, 0.6);
 }
 
 .team-list{
