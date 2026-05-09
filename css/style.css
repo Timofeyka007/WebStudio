@@ -9,6 +9,67 @@
   --third_background-color: #f5f4fa;
 }
 
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-18px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(28px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.92);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes softPulse {
+  0%,
+  100% {
+    transform: scale(1);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  }
+
+  50% {
+    transform: scale(1.04);
+    box-shadow: 0px 8px 20px rgba(33, 150, 243, 0.35);
+  }
+}
+
+@keyframes modalOpen {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -48%) scale(0.88);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
 body{
   font-family: "Roboto", sans-serif;
   font-weight: 400;
@@ -98,6 +159,7 @@ nav a {
 
 .header{
   border-bottom: 1px solid var(--navcontainer-color);
+  animation: fadeInDown 700ms ease both;
 }
 
 .header-container{
@@ -181,6 +243,10 @@ nav a {
   background-color: var(--first_and_last_background-color);
 }
 
+.hero-title {
+  animation: fadeInUp 800ms ease 150ms both;
+}
+
 .container{
   max-width: 1200px;
   margin: 0 auto;
@@ -204,12 +270,14 @@ nav a {
   cursor: pointer;
   transition: background-color 250ms ease, box-shadow 250ms ease;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  animation: fadeInUp 800ms ease 350ms both, softPulse 2600ms ease-in-out 1400ms infinite;
 }
 
 .hero-button:hover,
 .hero-button:focus {
   background-color: #188ce8;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+  animation-play-state: paused;
 }
 
 
@@ -220,6 +288,19 @@ nav a {
 
 .features-item{
   width: 270px;
+  animation: fadeInUp 650ms ease both;
+}
+
+.features-item:nth-child(2) {
+  animation-delay: 120ms;
+}
+
+.features-item:nth-child(3) {
+  animation-delay: 240ms;
+}
+
+.features-item:nth-child(4) {
+  animation-delay: 360ms;
 }
 
 .features-item::before {
@@ -232,6 +313,12 @@ nav a {
   background-repeat: no-repeat;
   background-position: center;
   border-radius: 4px;
+  transition: transform 250ms ease, box-shadow 250ms ease;
+}
+
+.features-item:hover::before {
+  transform: translateY(-6px);
+  box-shadow: 0px 10px 22px rgba(33, 150, 243, 0.18);
 }
 
 
@@ -259,6 +346,16 @@ nav a {
 
 .services-item{
   position: relative;
+  overflow: hidden;
+  animation: scaleIn 650ms ease both;
+}
+
+.services-item:nth-child(2) {
+  animation-delay: 140ms;
+}
+
+.services-item:nth-child(3) {
+  animation-delay: 280ms;
 }
 
 .services-image {
@@ -266,6 +363,11 @@ nav a {
   height: 294px;
   object-fit: cover;
   display: block;
+  transition: transform 350ms ease;
+}
+
+.services-item:hover .services-image {
+  transform: scale(1.04);
 }
 
 .label {
@@ -292,11 +394,33 @@ nav a {
   background-color: var(--photo_and_h1-color);
   text-align: center;
   padding-bottom: 30px;
+  animation: fadeInUp 650ms ease both;
+  transition: transform 250ms ease, box-shadow 250ms ease;
 
   box-shadow:
     0px 1px 3px rgba(0, 0, 0, 0.12),
     0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+.team-item:nth-child(2) {
+  animation-delay: 120ms;
+}
+
+.team-item:nth-child(3) {
+  animation-delay: 240ms;
+}
+
+.team-item:nth-child(4) {
+  animation-delay: 360ms;
+}
+
+.team-item:hover {
+  transform: translateY(-8px);
+  box-shadow:
+    0px 8px 18px rgba(0, 0, 0, 0.12),
+    0px 4px 8px rgba(0, 0, 0, 0.14),
+    0px 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .team-name{
@@ -361,6 +485,27 @@ nav a {
   border: 1px solid #afb1b8;
   border-radius: 4px;
   transition: border-color 250ms ease, color 250ms ease;
+  animation: scaleIn 550ms ease both;
+}
+
+.clients-item:nth-child(2) .clients-link {
+  animation-delay: 80ms;
+}
+
+.clients-item:nth-child(3) .clients-link {
+  animation-delay: 160ms;
+}
+
+.clients-item:nth-child(4) .clients-link {
+  animation-delay: 240ms;
+}
+
+.clients-item:nth-child(5) .clients-link {
+  animation-delay: 320ms;
+}
+
+.clients-item:nth-child(6) .clients-link {
+  animation-delay: 400ms;
 }
 
 .clients-link:hover,
@@ -511,12 +656,31 @@ nav a {
   border: none;
   border-radius: 4px;
   cursor: pointer;
+  transition: background-color 250ms ease, color 250ms ease, box-shadow 250ms ease, transform 250ms ease;
+  animation: fadeInDown 500ms ease both;
+}
+
+.filters-item:nth-child(2) .filters-button {
+  animation-delay: 80ms;
+}
+
+.filters-item:nth-child(3) .filters-button {
+  animation-delay: 160ms;
+}
+
+.filters-item:nth-child(4) .filters-button {
+  animation-delay: 240ms;
+}
+
+.filters-item:nth-child(5) .filters-button {
+  animation-delay: 320ms;
 }
 
 .filters button:hover,
 .filters button:focus {
   background-color: var(--hover_and_logo-color);
   color: #fff;
+  transform: translateY(-2px);
 
   box-shadow:
     0px 3px 1px rgba(0, 0, 0, 0.1),
@@ -547,10 +711,29 @@ nav a {
   max-width: 404px;
   background-color: #fff;
   outline: transparent;
+  animation: fadeInUp 650ms ease both;
+  transition: transform 250ms ease, box-shadow 250ms ease;
   box-shadow:
     0px 1px 1px rgba(0, 0, 0, 0.12),
     0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+
+.portfolio-item:nth-child(3n + 2) {
+  animation-delay: 120ms;
+}
+
+.portfolio-item:nth-child(3n) {
+  animation-delay: 240ms;
+}
+
+.portfolio-item:hover,
+.portfolio-item:focus-within {
+  transform: translateY(-6px);
+  box-shadow:
+    0px 6px 12px rgba(0, 0, 0, 0.12),
+    0px 8px 18px rgba(0, 0, 0, 0.08),
+    1px 8px 16px rgba(0, 0, 0, 0.14);
 }
 
 .portfolio-thumb{
@@ -639,6 +822,10 @@ nav a {
     0px 1px 3px rgba(0, 0, 0, 0.12),
     0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+.backdrop:not(.is-hidden) .modal {
+  animation: modalOpen 300ms cubic-bezier(0.4, 0, 0.2, 1) both;
 }
 
 .backdrop.is-hidden .modal {
